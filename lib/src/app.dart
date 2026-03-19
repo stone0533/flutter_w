@@ -7,7 +7,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-import '../w.dart';
+import '../flutter_w_tools.dart';
 
 /// 应用初始化和运行工具类
 class WApp {

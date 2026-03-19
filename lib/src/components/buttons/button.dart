@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
-import 'package:flutter_w/src/components/components.dart';
+import 'package:flutter_w_tools/src/components/components.dart';
 
 /// 按钮效果类型枚举
 ///

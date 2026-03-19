@@ -1,4 +1,4 @@
-library w;
+library flutter_w_tools;
 
 // 核心应用
 export 'src/app.dart';

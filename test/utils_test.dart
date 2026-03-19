@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_w/src/utils/validator.dart';
-import 'package:flutter_w/src/utils/secret.dart';
-import 'package:flutter_w/src/utils/logger.dart';
+import 'package:flutter_w_tools/src/utils/validator.dart';
+import 'package:flutter_w_tools/src/utils/secret.dart';
+import 'package:flutter_w_tools/src/utils/logger.dart';
 
 void main() {
   group('WValidator Tests', () {

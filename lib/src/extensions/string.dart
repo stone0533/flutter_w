@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_w/src/config.dart';
-import 'package:flutter_w/src/components/common/image.dart';
+import 'package:flutter_w_tools/src/config.dart';
+import 'package:flutter_w_tools/src/components/common/image.dart';
 
 import 'color.dart';
 

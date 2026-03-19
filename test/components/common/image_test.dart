@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_w/src/components/common/image.dart';
-import 'package:flutter_w/src/components/common/image_cache_manager.dart';
-import 'package:flutter_w/src/components/common/network_image_with_retry.dart';
+import 'package:flutter_w_tools/src/components/common/image.dart';
+import 'package:flutter_w_tools/src/components/common/image_cache_manager.dart';
+import 'package:flutter_w_tools/src/components/common/network_image_with_retry.dart';
 
 void main() {
   setUpAll(() {

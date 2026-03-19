@@ -1,7 +1,7 @@
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_w/src/utils/toast.dart';
+import 'package:flutter_w_tools/src/utils/toast.dart';
 
 // 清理函数，在每个测试结束后调用
 void cleanUp() {

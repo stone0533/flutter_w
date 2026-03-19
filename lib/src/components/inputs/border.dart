@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../w.dart';
+import '../../../flutter_w_tools.dart';
 
 /// WFormBorder 组件是一个表单边框容器，用于为表单输入添加统一的边框样式和错误提示
 ///

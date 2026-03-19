@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_w/w.dart';
+import 'package:flutter_w_tools/flutter_w_tools.dart';
 
 /// 增强版脚手架组件，提供更多自定义选项
 class WScaffold extends StatelessWidget {
