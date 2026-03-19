@@ -1,10 +1,10 @@
 # Flutter W
 
-一个功能丰富的 Flutter 工具库，提供了多种实用工具和组件，帮助开发者快速构建高质量的 Flutter 应用。
+一个基于Config开发的功能丰富的 Flutter 工具库，提供了多种实用工具和组件，帮助开发者快速构建高质量的 Flutter 应用。
 
-## 功能特性
+## 特性
 
-### 工具类
+### 🔧 工具类
 - **加密工具** (`WSecret`): 提供 AES 加密/解密、哈希函数、安全随机密钥生成等功能
 - **验证工具** (`WValidator`): 提供邮箱、手机号、密码强度等多种验证功能
 - **日志工具** (`WLogger`): 提供不同级别的日志记录功能
@@ -14,23 +14,46 @@
 - **错误处理** (`WErrorHandler`): 提供统一的错误处理机制
 - **配置管理** (`WEnv`): 提供环境变量配置管理功能
 
-### 主题系统
+### 🎨 主题系统
 - **主题管理** (`WThemeManager`): 支持亮色主题、暗色主题和跟随系统主题
 - **主题配置** (`WThemeConfig`): 提供自定义主题配置功能
 
-### 国际化
+### 🌍 国际化
 - **多语言支持** (`WTranslations`): 支持中文和英文两种语言
 - **语言切换**: 支持动态切换语言
 
-### 平台适配
+### 📱 平台适配
 - **平台检测** (`WPlatform`): 支持检测不同平台（Android、iOS、Web、Linux、macOS、Windows）
 - **平台特定代码**: 支持执行平台特定的代码
 
-### 插件系统
+### 🧩 插件系统
 - **插件接口** (`WPlugin`): 定义插件接口
 - **插件管理** (`WPluginManager`): 管理插件的生命周期
 
+### 📦 API 管理
+- **网络请求** (`WRequest`): 基于 Dio 的网络请求封装
+- **拦截器**: 提供缓存、Cookie、错误处理、日志、Token 等拦截器
+- **响应处理**: 统一的响应格式和错误处理
+
+### 🎯 组件库
+- **按钮** (`WButton`): 多种样式的按钮组件
+- **输入框** (`WTextField`): 功能丰富的文本输入组件
+- **表单** (`WForm`): 表单构建和验证
+- **布局** (`WLayout`): 常用布局组件
+- **通用组件**: 徽章、图片、文本、QR 码扫描等
+
 ## 安装
+
+### 从 pub.dev 安装
+
+在 `pubspec.yaml` 文件中添加依赖：
+
+```yaml
+dependencies:
+  flutter_w: ^1.0.0
+```
+
+### 从本地安装
 
 在 `pubspec.yaml` 文件中添加依赖：
 
@@ -46,7 +69,7 @@ dependencies:
 flutter pub get
 ```
 
-## 使用示例
+## 快速开始
 
 ### 初始化应用
 
@@ -73,7 +96,9 @@ void main() async {
 }
 ```
 
-### 使用加密工具
+## 使用示例
+
+### 加密工具
 
 ```dart
 import 'package:flutter_w/flutter_w.dart';
@@ -99,7 +124,7 @@ final isValid = WSecret.verifyPassword(password, hash);
 print(isValid); // 输出: true
 ```
 
-### 使用验证工具
+### 验证工具
 
 ```dart
 import 'package:flutter_w/flutter_w.dart';
@@ -130,7 +155,7 @@ final sanitizedXss = WValidator.preventXss(xssInput);
 print(sanitizedXss);
 ```
 
-### 使用主题系统
+### 主题系统
 
 ```dart
 import 'package:flutter_w/flutter_w.dart';
@@ -157,7 +182,7 @@ WThemeManager().addListener((theme) {
 });
 ```
 
-### 使用国际化
+### 国际化
 
 ```dart
 import 'package:flutter_w/flutter_w.dart';
@@ -178,7 +203,7 @@ Text('hello'.tr); // 输出: 你好 (中文) 或 Hello (英文)
 Get.updateLocale(Locale('en', 'US'));
 ```
 
-### 使用性能监控
+### 性能监控
 
 ```dart
 import 'package:flutter_w/flutter_w.dart';
@@ -199,7 +224,7 @@ final taskDuration = WPerformance().end('heavy_task', id);
 print('Heavy task took $taskDuration ms');
 ```
 
-### 使用用户体验优化
+### 用户体验优化
 
 ```dart
 import 'package:flutter_w/flutter_w.dart';
@@ -229,7 +254,7 @@ final scrollController = ScrollController();
 await WUX().smoothScrollToTop(scrollController);
 ```
 
-### 使用平台适配
+### 平台适配
 
 ```dart
 import 'package:flutter_w/flutter_w.dart';
@@ -263,7 +288,7 @@ WPlatform.executePlatformAction(
 );
 ```
 
-### 使用插件系统
+### 插件系统
 
 ```dart
 import 'package:flutter_w/flutter_w.dart';
@@ -300,6 +325,30 @@ final myPlugin = WPluginManager().getPlugin<MyPlugin>('my_plugin');
 
 // 销毁所有插件
 await WPluginManager().disposeAll();
+```
+
+### 网络请求
+
+```dart
+import 'package:flutter_w/flutter_w.dart';
+
+// 发送 GET 请求
+final response = await WRequest.get('/api/users');
+print(response.data);
+
+// 发送 POST 请求
+final postResponse = await WRequest.post('/api/users', data: {
+  'name': 'John Doe',
+  'email': 'john@example.com',
+});
+print(postResponse.data);
+
+// 发送带参数的请求
+final paramsResponse = await WRequest.get('/api/users', params: {
+  'page': 1,
+  'limit': 10,
+});
+print(paramsResponse.data);
 ```
 
 ## 贡献

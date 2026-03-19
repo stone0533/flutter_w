@@ -372,6 +372,12 @@ class _FormBuilderMultiDropdownItem extends StatefulWidget {
   /// 文本样式
   final TextStyle? style;
 
+  /// 选中状态文本样式
+  final TextStyle? checkedStyle;
+
+  /// 禁用状态文本样式
+  final TextStyle? disabledStyle;
+
   /// 未选中状态图标
   final Widget icon;
 
@@ -403,6 +409,8 @@ class _FormBuilderMultiDropdownItem extends StatefulWidget {
     required this.onTap,
     this.padding,
     this.style,
+    this.checkedStyle,
+    this.disabledStyle,
     required this.icon,
     required this.checkedIcon,
     this.disabledIcon,
@@ -451,7 +459,11 @@ class _FormBuilderMultiDropdownItemState extends State<_FormBuilderMultiDropdown
               padding: widget.titlePadding ?? const EdgeInsets.only(left: 8),
               child: Text(
                 widget.title,
-                style: widget.style,
+                style: widget.statue == _FormBuilderMultiDropdownItemStatue.disable
+                    ? widget.disabledStyle ?? widget.style
+                    : isChecked
+                    ? widget.checkedStyle ?? widget.style
+                    : widget.style,
               ),
             ),
           ],
@@ -471,6 +483,9 @@ class WFormMultiDropdownConfig {
 
   /// 宽度
   double? _width;
+
+  /// 内容内边距
+  EdgeInsetsGeometry? _contentPadding;
 
   /// Y轴偏移
   double? _yOffset;
@@ -548,6 +563,11 @@ class WFormMultiDropdownConfig {
   /// 宽度 setter
   set width(double? value) {
     _width = value;
+  }
+
+  /// 内容内边距 setter
+  set contentPadding(EdgeInsetsGeometry? value) {
+    _contentPadding = value;
   }
 
   /// Y轴偏移 setter
