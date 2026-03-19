@@ -366,17 +366,8 @@ class _FormBuilderMultiDropdownItem extends StatefulWidget {
   /// 点击回调
   final _FormBuilderMultiDropdownItemGestureTapCallback onTap;
 
-  /// 内边距
-  final EdgeInsetsGeometry? padding;
-
   /// 文本样式
   final TextStyle? style;
-
-  /// 选中状态文本样式
-  final TextStyle? checkedStyle;
-
-  /// 禁用状态文本样式
-  final TextStyle? disabledStyle;
 
   /// 未选中状态图标
   final Widget icon;
@@ -407,10 +398,7 @@ class _FormBuilderMultiDropdownItem extends StatefulWidget {
     this.titlePadding,
     this.statue = _FormBuilderMultiDropdownItemStatue.enable,
     required this.onTap,
-    this.padding,
     this.style,
-    this.checkedStyle,
-    this.disabledStyle,
     required this.icon,
     required this.checkedIcon,
     this.disabledIcon,
@@ -444,7 +432,7 @@ class _FormBuilderMultiDropdownItemState extends State<_FormBuilderMultiDropdown
         widget.onTap.call(widget.value, isChecked);
       },
       child: Container(
-        padding: widget.padding ?? EdgeInsets.zero,
+        padding: EdgeInsets.zero,
         alignment: Alignment.centerLeft,
         child: Row(
           mainAxisSize: MainAxisSize.min,
@@ -459,11 +447,7 @@ class _FormBuilderMultiDropdownItemState extends State<_FormBuilderMultiDropdown
               padding: widget.titlePadding ?? const EdgeInsets.only(left: 8),
               child: Text(
                 widget.title,
-                style: widget.statue == _FormBuilderMultiDropdownItemStatue.disable
-                    ? widget.disabledStyle ?? widget.style
-                    : isChecked
-                    ? widget.checkedStyle ?? widget.style
-                    : widget.style,
+                style: widget.style,
               ),
             ),
           ],
@@ -483,9 +467,6 @@ class WFormMultiDropdownConfig {
 
   /// 宽度
   double? _width;
-
-  /// 内容内边距
-  EdgeInsetsGeometry? _contentPadding;
 
   /// Y轴偏移
   double? _yOffset;
@@ -563,11 +544,6 @@ class WFormMultiDropdownConfig {
   /// 宽度 setter
   set width(double? value) {
     _width = value;
-  }
-
-  /// 内容内边距 setter
-  set contentPadding(EdgeInsetsGeometry? value) {
-    _contentPadding = value;
   }
 
   /// Y轴偏移 setter
