@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
-import 'package:flutter_w_tools/flutter_w_tools.dart';
+import 'package:w_tools/w_tools.dart';
 
 /// 表单下拉选择组件
 class WFormDropdown<T> extends StatelessWidget {

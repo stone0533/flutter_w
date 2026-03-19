@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import '../../../flutter_w_tools.dart';
+import '../../../w_tools.dart';
 
 /// 错误处理拦截器，用于处理 401 未授权错误和令牌刷新
 class WErrorInterceptor extends Interceptor {

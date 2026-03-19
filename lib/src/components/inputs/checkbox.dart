@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_form_builder/flutter_form_builder.dart';
-import 'package:flutter_w_tools/src/config.dart';
+import 'package:w_tools/src/config.dart';
 
 /// 单个复选框字段组件
 class WFormCheckbox extends FormBuilderField<bool> {

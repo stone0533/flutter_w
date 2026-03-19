@@ -74,7 +74,7 @@ flutter pub get
 ### 初始化应用
 
 ```dart
-import 'package:flutter_w_tools_tools/flutter_w_tools.dart';
+import 'package:w_tools_tools/flutter_w_tools.dart';
 
 void main() async {
   // 初始化应用
@@ -101,7 +101,7 @@ void main() async {
 ### 加密工具
 
 ```dart
-import 'package:flutter_w_tools_tools/flutter_w_tools.dart';
+import 'package:w_tools_tools/flutter_w_tools.dart';
 
 // 生成安全的随机密钥
 final key = WSecret.generateSecureKey();
@@ -127,7 +127,7 @@ print(isValid); // 输出: true
 ### 验证工具
 
 ```dart
-import 'package:flutter_w_tools_tools/flutter_w_tools.dart';
+import 'package:w_tools_tools/flutter_w_tools.dart';
 
 // 验证邮箱
 final email = 'test@example.com';
@@ -158,7 +158,7 @@ print(sanitizedXss);
 ### 主题系统
 
 ```dart
-import 'package:flutter_w_tools_tools/flutter_w_tools.dart';
+import 'package:w_tools_tools/flutter_w_tools.dart';
 
 // 获取当前主题
 final theme = WThemeManager().currentTheme;
@@ -185,7 +185,7 @@ WThemeManager().addListener((theme) {
 ### 国际化
 
 ```dart
-import 'package:flutter_w_tools_tools/flutter_w_tools.dart';
+import 'package:w_tools_tools/flutter_w_tools.dart';
 import 'package:get/get.dart';
 
 // 在 GetMaterialApp 中配置
@@ -206,7 +206,7 @@ Get.updateLocale(Locale('en', 'US'));
 ### 性能监控
 
 ```dart
-import 'package:flutter_w_tools_tools/flutter_w_tools.dart';
+import 'package:w_tools_tools/flutter_w_tools.dart';
 
 // 监控函数执行时间
 final duration = await WPerformance().monitor('network_request', () async {
@@ -227,7 +227,7 @@ print('Heavy task took $taskDuration ms');
 ### 用户体验优化
 
 ```dart
-import 'package:flutter_w_tools_tools/flutter_w_tools.dart';
+import 'package:w_tools_tools/flutter_w_tools.dart';
 
 // 防抖
 final debouncedFunction = WUX().debounce(() {
@@ -257,7 +257,7 @@ await WUX().smoothScrollToTop(scrollController);
 ### 平台适配
 
 ```dart
-import 'package:flutter_w_tools_tools/flutter_w_tools.dart';
+import 'package:w_tools_tools/flutter_w_tools.dart';
 
 // 检测平台
 if (WPlatform.isMobile) {
@@ -291,7 +291,7 @@ WPlatform.executePlatformAction(
 ### 插件系统
 
 ```dart
-import 'package:flutter_w_tools_tools/flutter_w_tools.dart';
+import 'package:w_tools_tools/flutter_w_tools.dart';
 
 // 创建插件
 class MyPlugin implements WPlugin {
@@ -330,7 +330,7 @@ await WPluginManager().disposeAll();
 ### 网络请求
 
 ```dart
-import 'package:flutter_w_tools_tools/flutter_w_tools.dart';
+import 'package:w_tools_tools/flutter_w_tools.dart';
 
 // 发送 GET 请求
 final response = await WRequest.get('/api/users');

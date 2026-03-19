@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_w_tools/src/utils/toast.dart';
+import 'package:w_tools/src/utils/toast.dart';
 
 void main() {
   group('WToast', () {

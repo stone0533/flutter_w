@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:dio/dio.dart';
-import 'package:flutter_w_tools/src/utils/logger.dart';
+import 'package:w_tools/src/utils/logger.dart';
 
 /// 缓存拦截器，用于缓存 HTTP 请求响应
 class WCacheInterceptor extends Interceptor {
